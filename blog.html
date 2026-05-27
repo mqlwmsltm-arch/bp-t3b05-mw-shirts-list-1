@@ -1,156 +1,87 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[내돈내산] 망원역 셔츠룸에서 친구들과 의리 지킨 리얼 후기</title>
-    <meta name="description" content="망원역 인근 셔츠룸 주말 리얼 방문 후기. 정찰제 시스템 분석과 서비스 만족도, 예약 꿀팁 대방출.">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: hsl(345, 100%, 45%);
-            --secondary: hsl(45, 100%, 50%);
-            --dark: hsl(345, 15%, 7%);
-            --card-bg: hsl(345, 15%, 12%);
-            --text: hsl(0, 0%, 94%);
-            --text-muted: hsl(345, 10%, 70%);
-            --border: hsl(345, 40%, 18%);
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: var(--dark);
-            color: var(--text);
-            font-family: 'Outfit', 'Noto Sans KR', sans-serif;
-            line-height: 1.7;
-            padding-bottom: 60px;
-        }
-        header {
-            background: linear-gradient(135deg, var(--dark), var(--card-bg));
-            border-bottom: 2px solid var(--border);
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: var(--primary);
-        }
-        .main-content {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .post-meta {
-            font-size: 0.9rem;
-            color: var(--secondary);
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        h1 {
-            font-size: 2.3rem;
-            font-weight: 800;
-            margin-bottom: 30px;
-            line-height: 1.3;
-        }
-        p {
-            margin-bottom: 20px;
-            color: var(--text-muted);
-        }
-        .blog-footer {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 25px;
-            margin-top: 40px;
-            text-align: center;
-        }
-        .blog-footer a {
-            color: var(--primary);
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        footer {
-            background-color: #120409;
-            padding: 40px 20px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-top: 80px;
-        }
-        footer p {
-            margin-bottom: 10px;
-        }
-        footer strong {
-            color: var(--text);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>셔츠룸 초보자를 위한 바가지(눈탱이) 절대 안 쓰는 실전 매뉴얼 | 망원 셔츠룸 백과사전</title>
+  <meta name="description" content="오늘 형이 셔츠룸 처음 가보거나 가끔 가는데 매번 계산서 볼 때마다 찜찜했던 동생들을 위해 바가지 예방 꿀팁 푼다.
+      첫째, 입구에서 무조건 실장한테 "오늘 주류 구성이랑 추가 요금 전혀 없는지" 녹음하듯 확답받아라. 정상적인 실장이라면 기분 좋게 오케이함.
+...">
+  <link rel="canonical" href="https://t3b05-mw-shirts-list-1.pages.dev/blog.html">
+  <meta name="bpaas-design-system" content="midnight-glass">
+  <meta name="bpaas-design-theme" content="kr-midnight-glass">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+      :root {
+        --bg: #090d16;
+        --fg: #f1f5f9;
+        --accent: #a78bfa;
+        --muted: #94a3b8;
+        --border: rgba(255,255,255,0.08);
+      }
+      body { background: var(--bg); color: var(--fg); font-family: 'Pretendard', sans-serif; line-height: 1.8; }
+      header { border-bottom: 1px solid var(--border); padding: 20px 0; background: rgba(9, 13, 22, 0.8); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; }
+      .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+      .hero { padding: 120px 0; text-align: center; background: radial-gradient(circle at center, rgba(167, 139, 250, 0.08), transparent 70%); }
+      .hero h1 { font-size: 3.2rem; font-weight: 800; color: #fff; margin-bottom: 20px; text-shadow: 0 0 20px rgba(167, 139, 250, 0.2); }
+      .btn { display: inline-block; padding: 14px 40px; background: linear-gradient(135deg, #a78bfa, #7c3aed); color: #fff; text-decoration: none; font-weight: 700; border-radius: 30px; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3); transition: all 0.3s; }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5); }
+      .content-section { padding: 80px 0; }
+      .card { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); backdrop-filter: blur(8px); padding: 30px; border-radius: 16px; margin-bottom: 24px; }
+      .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+      .review-card { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); padding: 24px; border-radius: 16px; }
+    
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 900; text-decoration: none; color: var(--fg); letter-spacing: -0.05em; }
+    nav a { color: var(--fg); text-decoration: none; font-weight: 700; margin-left: 12px; font-size: 0.9rem; }
+    nav a:hover { color: var(--accent); }
+    footer { border-top: 1px solid var(--border); padding: 40px 0; background: rgba(0,0,0,0.01); color: var(--muted); font-size: 0.85rem; }
+    footer .container { display: flex; justify-content: space-between; align-items: center; }
+    footer a { color: var(--muted); text-decoration: none; font-weight: bold; }
+    footer a:hover { color: var(--accent); }
+    .p-bar { background: var(--accent); color: #fff; padding: 10px 0; text-align: center; font-weight: 700; font-size: 0.95rem; }
+    .p-bar a { color: #fff; text-decoration: underline; }
+  </style>
 </head>
 <body>
-
-<header>
-    <div class="header-container">
-        <div class="logo">Mangwon Crimson</div>
-        <nav>
-            <a href="index.html">홈</a>
-            <a href="about.html">소개</a>
-            <a href="blog.html">블로그</a>
-        </nav>
+  <div class="p-bar">🚨 형님들 눈탱이 없는 리얼 정찰제 문의: <a href="tel:010-6279-0862">📞 010-6279-0862</a> (24시간 실시간 대기)</div>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">망원.셔츠룸</a>
+      <nav><a href="index.html">홈</a> | <a href="about.html">정보</a> | <a href="blog.html">블로그</a></nav>
     </div>
-</header>
-
-<div class="main-content">
-    <div class="post-meta">DATE: 2026.05.27 | CATEGORY: VALUE STORY</div>
-    <h1>[내돈내산] 망원역 셔츠룸에서 친구들과 제대로 의리 지키고 온 찐 후기</h1>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>셔츠룸 초보자를 위한 바가지(눈탱이) 절대 안 쓰는 실전 매뉴얼</h1>
+        <p style="font-size:1.2rem; opacity:0.9; margin-top:15px;">작성자: 망원 마당발 실장 형님 | 카테고리: 정보/꿀팁</p>
+      </div>
+    </section>
     
-    <p>어이 브로들! 오랜만에 시원시원한 찐후기 털어놓으려고 펜을 잡았어. 지난주 금요일에 오랜만에 마포로 놀러 온 고향 동생들과 1차로 소곱창 조진 뒤에 2차로 어디로 가야 하나 망설이다가, 아껴뒀던 망원역 근처 셔츠룸을 방문했어.</p>
-    
-    <p>망원동 쪽은 워낙 주택가 느낌이라 룸이 허술하지 않을까 약간 걱정했는데, 막상 문 열고 들어가니까 시설이 엄청 고급스럽고 환해서 일단 호감 상승! 미리 큰형 제휴 라인을 통해 예약하고 방문해서인지 실장님이 초특급 스피드로 룸 안내해 주셨고 과일 안주 서비스까지 기가 막히게 얹어 주셨지.</p>
-    
-    <p>본격적으로 셔츠 시스템 돌입하는데 매니저들 미모와 텐션이 아주 기대 이상이야! 강남 수준의 수질이 이 동네에도 숨어있었다니 친구들도 다들 환호성 내지르며 위스키 한 병 비우는 내내 춤추고 난리도 아니었음. 정찰제라 가격 깔끔하고 눈탱이 없는 확실한 케어를 망원동에서 찾는다면 무조건 뚫어봐라!</p>
-
-    <div class="blog-footer">
-        <h3>망원 셔츠룸 실시간 예약 & 오늘밤 타임 조율</h3>
-        <p style="margin-top: 10px;">상세 요금표와 대기 현황 체크는 아래 메인 핫라인 번호로!</p>
-        <p style="font-size: 1.3rem; font-weight: 800; color: #fff;"><a href="tel:010-6279-0862">010-6279-0862</a></p>
-        <p style="margin-top: 15px;"><a href="index.html">메인 망원 모음 홈으로 복귀 &rarr;</a></p>
+    <section class="content-section">
+      <div class="container">
+        <div class="card" style="border:none;">
+          <div style="font-size:1.15rem; line-height:2.0; color:var(--fg);">
+            <p style="margin-bottom:20px;">오늘 형이 셔츠룸 처음 가보거나 가끔 가는데 매번 계산서 볼 때마다 찜찜했던 동생들을 위해 바가지 예방 꿀팁 푼다.</p><p style="margin-bottom:20px;">첫째, 입구에서 무조건 실장한테 "오늘 주류 구성이랑 추가 요금 전혀 없는지" 녹음하듯 확답받아라. 정상적인 실장이라면 기분 좋게 오케이함.</p><p style="margin-bottom:20px;">둘째, 메인 타임 전에 미리 직통 예약 연락처(010-6279-0862)로 연락해서 당일 에이스 대기 현황과 룸 상태를 정확히 브리핑 받아라. 무작정 가면 룸도 안 좋고 대기만 오지게 길어짐.</p><p style="margin-bottom:20px;">셋째, 카드 결제 시 부가세 장난질 치는 곳들은 과감히 걸러라. 셔츠룸도 투명하게 정찰제로 운영하는 대형 합법 매장으로 가야 내 권리를 제대로 찾을 수 있다.</p><p style="margin-bottom:20px;">형이 알려준 이 3법칙만 사수하면 밤새 신나고 깔끔하게 놀다 올 수 있으니까 믿고 연락하길 바란다.</p>
+          </div>
+          <div style="margin-top:40px; padding:20px; border:1px dashed var(--accent); background:rgba(255,85,0,0.02); text-align:center;">
+            <p style="font-weight:bold; margin-bottom:15px;">이 글이 도움이 되셨다면, 형이 확실히 엄선한 로컬 매장 실시간 부킹 라인으로 예약해 보세요!</p>
+            <a href="index.html" style="color:var(--accent); font-weight:bold; text-decoration:underline;">[홈페이지 바로가기]</a> | 
+            <a href="about.html" style="color:var(--accent); font-weight:bold; text-decoration:underline;">[오시는 길 &amp; 요금표 확인]</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div>&copy; 2026 망원 셔츠룸 스페셜 가이드. All Rights Reserved.</div>
+      <div>
+        <a href="index.html">홈</a> | <a href="about.html">정보</a> | <a href="blog.html">블로그</a>
+      </div>
     </div>
-</div>
-
-<footer>
-    <p>상호: 망원 셔츠룸 올가이드 | 대표자: 망원왕</p>
-    <p>문의 직통 전화: <strong>010-6279-0862</strong> (부재 시 문자 필수)</p>
-    <p>&copy; 2026 Mangwon Crimson. All Rights Reserved. 본 사이트는 성인 전용 정보 포털입니다.</p>
-</footer>
-
+  </footer>
 </body>
 </html>
