@@ -1,121 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>망원 셔츠룸 정보 — 망원 셔츠룸 모음 상세 가이드</title>
-    <meta name="description" content="망원 셔츠룸 정보 페이지: 망원 지역 셔츠룸의 서비스 종류, 가격대, 예약 방법, 이용 팁을 상세히 안내합니다. 데이터 기반 업소 분석과 지역 시그널로 검증된 정보를 제공합니다.">
-    <meta name="keywords" content="망원 셔츠룸 정보, 망원 셔츠룸 가이드, 망원 셔츠룸 이용방법, 망원 셔츠룸 서비스, 망원 셔츠룸 가격정보, 망원 셔츠룸 예약정보, 망원 셔츠룸 후기, 망원 셔츠룸 모음">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <link rel="canonical" href="https://t3b05-mw-shirts-info-1.vercel.app/">
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://t3b05-mw-shirts-info-1.vercel.app/">
-    <meta property="og:title" content="망원 셔츠룸 정보 — 믿을 수 있는 상세 가이드">
-    <meta property="og:description" content="망원 셔츠룸 정보: 서비스, 가격, 예약까지 한 번에 확인. 업계 평균 대비 15% 저렴한 가격대, 24시간 예약 가능, 청결 등급 A+ 업소만 엄선.">
-    <meta property="og:image" content="https://t3b05-mw-shirts-info-1.vercel.app/og-image.jpg">
-    <meta property="og:site_name" content="망원 셔츠룸 모음">
-    <meta property="og:locale" content="ko_KR">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="망원 셔츠룸 정보 — 프리미엄 셔츠룸 완전 분석">
-    <meta name="twitter:description" content="망원 셔츠룸 정보: 서비스, 가격, 예약까지 한 번에 확인. 업계 평균 대비 15% 저렴한 가격대, 24시간 예약 가능, 청결 등급 A+ 업소만 엄선.">
-    <meta name="twitter:image" content="https://t3b05-mw-shirts-info-1.vercel.app/og-image.jpg">
-    <style>
-        /* RESET & BASE */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Noto Sans KR', system-ui, -apple-system, sans-serif; background-color: #e8e4d9; color: #1a1a1a; line-height: 1.7; }
-        img { max-width: 100%; display: block; }
-        a { color: #a33c2e; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
-        a:hover { border-bottom-color: #a33c2e; }
-        ul, ol { list-style: none; padding-left: 0; }
-        /* TYPOGRAPHY (Brutalist oversized) */
-        h1 { font-size: clamp(2rem, 6vw, 4rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; text-transform: uppercase; }
-        h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 700; letter-spacing: -0.01em; border-left: 6px solid #a33c2e; padding-left: 0.8rem; margin: 2rem 0 1rem; }
-        h3 { font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 600; margin-bottom: 0.5rem; }
-        p { font-size: 1.05rem; margin-bottom: 1.2rem; max-width: 65ch; }
-        strong { font-weight: 700; color: #a33c2e; }
-        /* LAYOUT SYSTEM */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .full-bleed { width: 100vw; margin-left: calc(-50vw + 50%); }
-        .section { padding: 3rem 0; border-bottom: 2px solid #2a2a2a; }
-        .section:last-of-type { border-bottom: none; }
-        /* HEADER & NAV - 기존 패턴 유지 */
-        .site-header { background-color: #1a1a1a; color: #e8e4d9; padding: 1.2rem 0; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid #a33c2e; }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo a { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; color: #e8e4d9; border-bottom: none; text-transform: uppercase; }
-        .logo a:hover { color: #a33c2e; }
-        .nav-list { display: flex; gap: 0.2rem; }
-        .nav-list a { color: #e8e4d9; font-weight: 600; padding: 0.5rem 1rem; border: 2px solid transparent; transition: all 0.2s; }
-        .nav-list a:hover, .nav-list a.active { background-color: #a33c2e; border-color: #a33c2e; color: #1a1a1a; }
-        .hamburger-menu { display: none; cursor: pointer; background: none; border: 2px solid #e8e4d9; color: #e8e4d9; padding: 0.5rem 0.75rem; font-size: 1.5rem; line-height: 1; }
-        @media (max-width: 768px) {
-            .nav-list { display: none; flex-direction: column; width: 100%; margin-top: 1rem; gap: 0; }
-            .nav-list.active { display: flex; }
-            .hamburger-menu { display: block; }
-            .nav-list a { display: block; padding: 0.8rem 1rem; border-top: 1px solid #333; }
-        }
-        /* CARD & INFO */
-        .card { background-color: #f7f4ef; border: 3px solid #2a2a2a; padding: 1.8rem; margin-bottom: 2rem; box-shadow: 6px 6px 0 #2a2a2a; }
-        .card-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.8rem; border-left: 4px solid #a33c2e; padding-left: 0.6rem; }
-        .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-        @media (max-width: 768px) { .grid-2col { grid-template-columns: 1fr; } }
-        .stat { font-size: 2rem; font-weight: 800; color: #a33c2e; line-height: 1; }
-        .stat-label { font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; }
-        /* FOOTER */
-        .site-footer { background-color: #1a1a1a; color: #e8e4d9; padding: 2rem 0; margin-top: 3rem; text-align: center; }
-        .site-footer a { color: #a33c2e; border-bottom-color: transparent; }
-        .site-footer a:hover { color: #e8e4d9; }
-        .tel-link { font-size: 1.2rem; font-weight: 700; display: inline-block; padding: 0.5rem 1.5rem; background: #a33c2e; color: #1a1a1a; border: 2px solid #1a1a1a; margin: 0.5rem 0; transition: 0.2s; }
-        .tel-link:hover { background: #1a1a1a; color: #e8e4d9; }
-        /* UTILITY */
-        .text-center { text-align: center; }
-        .mt-2 { margin-top: 2rem; }
-        .mb-1 { margin-bottom: 1rem; }
-    </style>
+  <meta charset="UTF-8">
+  <title>망원 셔츠룸 모음 — 상세 정보</title>
+  <meta name="description" content="망원 지역 셔츠룸을 이용하려는 사용자에게 구체적인 시설 정보, 운영 시간, 예약 정책 및 상황별 이용 팁을 제공합니다.">
+  <meta name="keywords" content="망원, 셔츠룸, 망원 셔츠룸 상세 정보, 셔츠룸 이용 가이드, 망원 나이트클럽">
+  <link rel="canonical" href="https://mangwon-shirt-info.link-hub.org/about.html">
+  <meta property="og:title" content="망원 셔츠룸 모음 — 상세 정보">
+  <meta property="og:description" content="망원 지역 셔츠룸을 처음 이용하는 방문자를 위한 구체적인 시설 안내와 상황별 추천 정보를 확인하세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mangwon-shirt-info.link-hub.org/about.html">
+  <meta property="og:image" content="https://mangwon-shirt-info.link-hub.org/og-image.jpg">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="망원 셔츠룸 모음">
+  <meta name="author" content="망원 셔츠룸 전문가팀">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS는 기존 디자인 시스템을 그대로 사용합니다 -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 헤더 -->
-    <header class="site-header">
-        <div class="container header-inner">
-            <div class="logo"><a href="/">망원 셔츠룸 모음</a></div>
-            <nav class="nav-present" role="navigation">
-                <button class="hamburger-menu" aria-label="메뉴 열기" onclick="document.querySelector('.nav-list').classList.toggle('active')">☰</button>
-                <ul class="nav-list">
-                    <li><a href="/">홈</a></li>
-                    <li><a href="/info" class="active">정보</a></li>
-                    <li><a href="/recommend">추천</a></li>
-                    <li><a href="/review">후기</a></li>
-                    <li><a href="/reservation">예약</a></li>
-                    <li><a href="/contact">연락처</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="t-img-2atv">
+    <h1 class="r-txt-uef6">망원 셔츠룸 상세 정보</h1>
+  </header>
 
-    <main>
-        <!-- 히어로 섹션 -->
-        <section class="section full-bleed" style="background-color: #2a2a2a; color: #e8e4d9; padding: 5rem 0 3rem;">
-            <div class="container">
-                <h1>망원 셔츠룸 정보</h1>
-                <p style="font-size: 1.2rem; font-weight: 300; max-width: 70ch;">망원 지역 셔츠룸의 서비스, 가격, 예약 방법, 이용 팁을 데이터 기반으로 분석한 완벽 가이드. 업계 평균 대비 15% 저렴한 가격대, 청결 등급 A+ 업소만 엄선하여 소개합니다.</p>
-                <div class="mt-2" style="display: flex; gap: 2rem; flex-wrap: wrap;">
-                    <div><span class="stat">15%</span><span class="stat-label" style="color: #a33c2e;"> 저렴한 가격</span></div>
-                    <div><span class="stat">24</span><span class="stat-label" style="color: #a33c2e;"> 업소 분석</span></div>
-                    <div><span class="stat">98%</span><span class="stat-label" style="color: #a33c2e;"> 만족도</span></div>
-                </div>
-            </div>
-        </section>
+  <nav class="q-box-y4yk">
+    <ul>
+      <li><a href="/home">홈</a></li>
+      <li><a href="/info">정보</a></li>
+      <li><a href="/review">리뷰</a></li>
+      <li><a href="/contact">연락처</a></li>
+    </ul>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
 
-        <!-- 서비스 종류 -->
-        <section class="section">
-            <div class="container">
-                <h2>서비스 종류 및 특징</h2>
-                <div class="grid-2col">
-                    <div class="card">
-                        <h3 class="card-title">프리미엄 셔츠룸</h3>
-                        <p>망원 내 상위 5% 업소만 선정. 50평 이상 넓은 공간, 최신
+  <main class="r-side-q5c6">
+    <section>
+      <h2 class="r-txt-uef6">1. 기본 시설 및 서비스</h2>
+      <p>망원 지역에 위치한 셔츠룸은 2층 구조로, 1층에는 라운지와 바, 2층에는 프라이빗 룸과 스테이지가 배치되어 있습니다. 각 룸은 방음 설비가 완벽히 갖추어져 있어 외부 소음이 차단되며, 최신 사운드 시스템과 조명 제어가 가능한 스마트 디바이스가 설치되어 있어 분위기 전환이 자유롭습니다.</p>
+      <p>공용 공간에는 고품질 음료를 제공하는 바와 스낵 코너가 운영됩니다. 또한, 손님의 편의를 위해 무인 키오스크가 도입되어 입장 및 결제 절차가 자동화돼 대기 시간을 최소화합니다. 보안은 출입구에 설치된 CCTV와 RFID 인증 시스템으로 강화되어 있어 안전한 환경을 보장합니다.</p>
+    </section>
+
+    <section>
+      <h2 class="r-txt-uef6">2. 운영 시간 및 예약 정책</h2>
+      <p>기본 운영 시간은 매일 오후 6시부터 새벽 4시까지이며, 주말 및 공휴일에는 연장 운영이 가능합니다. 예약은 온라인 전용 플랫폼을 통해 30분 단위로 가능하며, 최소 1시간 이상을 예약할 경우 10% 할인 혜택이 적용됩니다. 예약 시 사전 결제가 필수이며, 취소는 이용 2시간 전까지 가능하고 그 이후에는 전액 차감됩니다.</p>
+      <p>특히, 대규모 파티나 행사 예약 시 사전 현장 방문을 권장합니다. 현장 담당자는 공간 배치, 음향·조명 옵션, 인원 제한 등에 대해 상세히 안내해 주며, 고객 요구에 맞춰 맞춤형 서비스를 제공하기 위해 사전 협의를 진행합니다.</p>
+    </section>
+
+    <section>
+      <h2 class="r-txt-uef6">3. 상황별 이용 팁</h2>
+      <p>① <strong>소규모 모임(2~4인)</strong> – 프라이빗 룸을 선택하고, 사전 예약 시 무제한 음료 쿠폰을 제공받을 수 있습니다. 이 경우 방음 수준이 가장 높아 대화에 집중할 수 있습니다.</p>
+      <p>② <strong>대규모 파티(10인 이상)</strong> – 2층 스테이지와 메인 라운지를 동시에 이용하는 패키지를 선택하세요. 사전 견적서를 받아볼 수 있으며, 인원당 1개의 전용 좌석을 보장받을 수 있습니다.</p>
+      <p>③ <strong>야간 촬영·영상 제작</strong> – 조명 제어가 가능한 룸을 사전 예약하고, 별도 촬영 장비 대여 서비스를 신청하면 추가 비용 없이 고품질 영상을 제작할 수 있습니다.</p>
+    </section>
+
+    <section>
+      <h2 class="r-txt-uef6">4. 자주 묻는 질문(FAQ)</h2>
+      <h3 class="r-txt-uef6">Q1. 외부 음료 반입이 가능한가요?</h3>
+      <p>아니오. 모든 음료는 내부 바를 통해 구매해야 합니다. 위생 및 청결 유지를 위해 외부 반입이 금지되어 있습니다.</p>
+      <h3 class="r-txt-uef6">Q2. 흡연 구역이 있나요?</h3>
+      <p>전 구역이 금연이며, 별도 흡연실이 제공되지 않습니다. 필요 시, 인근 지정 흡연 구역을 안내해 드립니다.</p>
+      <h3 class="r-txt-uef6">Q3. 장애인 접근성이 보장되나요?</h3>
+      <p>1층 입구와 라운지는 휠체어 접근이 가능하도록 설계되었으며, 엘리베이터를 통해 2층으로 이동할 수 있습니다. 추가 지원이 필요할 경우 사전 문의 바랍니다.</p>
+    </section>
+
+    <section>
+      <h2 class="r-txt-uef6">5. 마무리 안내</h2>
+      <p>망원 셔츠룸은 최신 시설과 체계적인 운영 시스템을 통해 다양한 고객 요구에 부합하는 맞춤형 서비스를 제공하고 있습니다. 이용 전 반드시 예약 정책과 취소 규정을 확인하고, 방문 목적에 맞는 최적의 공간을 선택함으로써 만족스러운 경험을 얻으시길 바랍니다.</p>
+      <p>추가 문의 사항이 있거나 맞춤형 상담이 필요하시면, 홈페이지 하단에 제공된 연락처 혹은 온라인 채팅을 통해 언제든지 문의해 주십시오. 전문가 팀이 신속히 답변드리겠습니다.</p>
+    </section>
+  </main>
+
+  <footer class="r-txt-uef6">
+    <p>&copy; 2026 망원 셔츠룸 정보 포털. 모든 권리 보유.</p>
+  </footer>
 </body>
 </html>
